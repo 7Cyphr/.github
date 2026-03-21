@@ -101,4 +101,4 @@ Cyphr is a secure API key management service designed for fast, reliable storage
 
 ## Author
 
-Built by Nexus
+Built by Aritra
