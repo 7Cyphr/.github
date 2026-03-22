@@ -1,86 +1,54 @@
 <div align="center">
 
+<img src="https://i.postimg.cc/fJWxMqWD/cyphr-logo-round.png" width="120" />
+
 # CYPHR
 
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
 ### Edge-Native API Key Management Service
 
-Secure, low-latency API key management built on an edge-native serverless architecture.
+Secure, low-latency API key management service built on an edge-native serverless architecture.
 
 **https://cyphr.pages.dev**
 
-</div>
+</div><br>
 
----
 
-## Overview
+## Why Cyphr ?
 
-Cyphr is a secure API key management service designed for fast, reliable storage and retrieval of secrets. It leverages edge computing, encryption, and caching to minimize latency while ensuring strong security guarantees.
+Most key management solutions either introduce unnecessary latency or are overly complex.
 
+Cyphr focuses on:
+
+- Fast read access through edge caching.
+- Strong encryption guarantees.
+- Minimal operational overhead.
 
 ## Features
 
-- **Edge Encryption (AES-256-GCM)**
+- **Edge Encryption (AES-256-GCM)**<br>
   Secrets are encrypted at the edge before persistence.
 
-- **Low-Latency Reads**
-  Cloudflare KV caching reduces P95 read latency by **~65%**.
+- **Low-Latency Reads**<br>
+  P95 read latency reduced by **~65%** using Cloudflare KV caching.
 
-- **Edge-Native Execution**
-  Runs on Cloudflare Workers, bringing compute closer to users.
+- **Edge-Native Execution**<br>
+  Runs on Cloudflare Workers for globally distributed execution.
 
-- **Minimal API Design**
-  Clean and simple REST API for managing keys.
+- **Minimal API Design**<br>
+  Simple and predictable API for managing keys.
 
-- **Dashboard Interface**
-  Lightweight frontend for quick key management.
+- **Lightweight Dashboard**
+  Fast interface for managing secrets.
 
+## Quick Start
 
-## Architecture
-```
-    ┌───────────────┐
-    │     Client    │
-    └──────┬────────┘
-           │
-           │ Authenticate
-           ▼
-    ┌──────────────────────────────┐
-    │ Supabase Auth (GitHub OAuth) │
-    └──────┬───────────────────────┘
-           │
-           │ JWT Token
-           ▼
-    ┌───────────────┐
-    │     Client    │
-    └──────┬────────┘
-           │
-           │ API Request (with JWT)
-           ▼
-    ┌──────────────────────┐
-    │  Cloudflare Worker   │
-    └──────┬───────────────┘
-           │
-           ├── Read → KV Cache
-           │
-           └── Write → AES-256-GCM → PostgreSQL (Neon)
+1. Sign in using GitHub
+2. Store an API key
+3. Retrieve secrets via the dashboard
 
-```
-
-- Edge layer handles request processing, encryption, and caching
-- KV cache accelerates read-heavy workloads
-- Database stores encrypted secrets
-- Authentication handled via Supabase Auth
-
-
-## Tech Stack
-
-- **Frontend**: HTML, CSS, Bulma, JavaScript (ES6+)
-- **Backend**: Node.js, Hono
-- **Auth**: Supabase Auth
-- **Database**: PostgreSQL (Neon)
-- **Edge Runtime**: Cloudflare Workers
-- **Caching**: Cloudflare KV
+Cyphr handles encryption, caching, and storage automatically.
 
 ## Performance
 
@@ -93,11 +61,20 @@ Cyphr is a secure API key management service designed for fast, reliable storage
 - Stateless authentication model
 - No plaintext secrets stored
 
+## Tech Stack
+
+- **Frontend**: HTML, CSS, Bulma, JavaScript (ES6+)
+- **Backend**: Node.js, Hono
+- **Auth**: Supabase Auth
+- **Database**: PostgreSQL (Neon)
+- **Edge Runtime**: Cloudflare Workers
+- **Caching**: Cloudflare KV
+
 ## Notes
 
-- Designed for developer-focused workflows
-- Focused on performance and simplicity
-- Not intended as a full enterprise secrets manager
+- Designed for developer-focused workflows.
+- Focused on performance and simplicity.
+- Not intended as a full enterprise secrets manager.
 
 ## Author
 
