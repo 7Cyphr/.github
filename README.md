@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://i.postimg.cc/fJWxMqWD/cyphr-logo-round.png" width="120" />
+[![cyphr_logo_round.png](https://i.postimg.cc/wTLFcnSy/cyphr_logo_round.png)](https://postimg.cc/fJWxMqWD)
 
 # CYPHR
 
@@ -50,16 +50,22 @@ Cyphr focuses on:
 
 Cyphr handles encryption, caching, and storage automatically.
 
+## Architecture
+
+Below is a simple system design diagram to explain the basic flow of data
+
+[![cypher_architecture.png](https://i.postimg.cc/MT1S1zJF/cypher_architecture.png)](https://postimg.cc/phV4HbTf)
+
 ## Performance
 
-- **~65% reduction in P95 read latency** using KV caching
-- Optimized for read-heavy workloads
+- **~65% reduction in P95 read latency** using KV caching.
+- Optimized for read-heavy workloads.
 
 ## Security
 
-- AES-256-GCM encryption applied before persistence
-- Stateless authentication model
-- No plaintext secrets stored
+- AES-256-GCM encryption applied before persistence.
+- Stateless authentication model.
+- No plaintext secrets stored.
 
 ## Tech Stack
 
@@ -76,6 +82,11 @@ Cyphr handles encryption, caching, and storage automatically.
 - Focused on performance and simplicity.
 - Not intended as a full enterprise secrets manager.
 
-## Author
+## Repositories
+
+- Frontend: https://github.com/NexusWasLost/cyphr-client
+- Backend: https://github.com/NexusWasLost/cyphr-server
+
+## Contributor
 
 Built by Aritra
