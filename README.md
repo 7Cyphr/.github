@@ -58,7 +58,7 @@ Below is a simple system design diagram to explain the basic flow of data
 
 ## Performance
 
-- **~65% reduction in P95 read latency** using KV caching.
+- **~82% reduction in P95 read latency** using Isolate Memory and KV caching.
 - Optimized for read-heavy workloads.
 
 ## Security
