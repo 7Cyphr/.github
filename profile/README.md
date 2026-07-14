@@ -69,8 +69,8 @@ Below is a simple system design diagram to explain the basic flow of data
 
 ## Tech Stack
 
-- **Frontend**: HTML, CSS, Bulma, JavaScript (ES6+)
-- **Backend**: Node.js, Hono
+- **Client**: HTML, CSS, Bulma, JavaScript (ES6+)
+- **Server**: Node.js, Hono
 - **Auth**: Supabase Auth
 - **Database**: PostgreSQL (Neon)
 - **Edge Runtime**: Cloudflare Workers
