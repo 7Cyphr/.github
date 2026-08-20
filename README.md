@@ -84,8 +84,8 @@ Below is a simple system design diagram to explain the basic flow of data
 
 ## Repositories
 
-- Frontend: https://github.com/NexusWasLost/cyphr-client
-- Backend: https://github.com/NexusWasLost/cyphr-server
+- Client: https://github.com/NexusWasLost/cyphr-client
+- Server: https://github.com/NexusWasLost/cyphr-server
 
 ## Contributor
 
