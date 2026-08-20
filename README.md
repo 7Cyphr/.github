@@ -4,7 +4,7 @@
 
 # CYPHR
 
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-AGPLv3-blue?style=for-the-badge)
 
 ### Edge-Native API Key Management Service
 
