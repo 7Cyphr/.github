@@ -15,11 +15,11 @@ Secure, low-latency API key management service built on an edge-native serverles
 </div><br>
 
 
-## Why Cyphr ?
+## Why CYPHR ?
 
 Most key management solutions either introduce unnecessary latency or are overly complex.
 
-Cyphr focuses on:
+CYPHR focuses on:
 
 - Fast read access through edge caching.
 - Strong encryption guarantees.
@@ -31,7 +31,7 @@ Cyphr focuses on:
   Secrets are encrypted at the edge before persistence.
 
 - **Low-Latency Reads**<br>
-  P95 read latency reduced by **~65%** using Cloudflare KV caching.
+  Cloudflare KV caching keeps key retrieval fast, wherever your requests come from.
 
 - **Edge-Native Execution**<br>
   Runs on Cloudflare Workers for globally distributed execution.
@@ -39,7 +39,7 @@ Cyphr focuses on:
 - **Minimal API Design**<br>
   Simple and predictable API for managing keys.
 
-- **Lightweight Dashboard**
+- **Lightweight Dashboard**<br>
   Fast interface for managing secrets.
 
 ## Quick Start
@@ -48,7 +48,7 @@ Cyphr focuses on:
 2. Store an API key
 3. Retrieve secrets via the dashboard
 
-Cyphr handles encryption, caching, and storage automatically.
+CYPHR handles encryption, caching, and storage automatically.
 
 ## Architecture
 
@@ -56,14 +56,9 @@ Below is a simple system design diagram to explain the basic flow of data
 
 [![cypher_architecture.png](https://i.postimg.cc/MT1S1zJF/cypher_architecture.png)](https://postimg.cc/phV4HbTf)
 
-## Performance
-
-- **~82% reduction in P95 read latency** using Isolate Memory and KV caching.
-- Optimized for read-heavy workloads.
-
 ## Security
 
-- AES-256-GCM encryption applied before persistence.
+- AES-256-GCM encryption at REST before persistence.
 - Stateless authentication model.
 - No plaintext secrets stored.
 
@@ -80,7 +75,9 @@ Below is a simple system design diagram to explain the basic flow of data
 
 - Designed for developer-focused workflows.
 - Focused on performance and simplicity.
-- Not intended as a full enterprise secrets manager.
+- Encryption and decryption happen server-side; secrets are encrypted at rest.
+- Decryption only on demand. Plaintext key is never cached, logged or exposed.
+- Does not support full End-to-End Encryption (for now).
 
 ## Repositories
 
